@@ -25,7 +25,8 @@ export class HeroDetailComponent implements OnInit {
   
   getHero(): void {
     const id = + this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id)
+    const name = this.route.snapshot.paramMap.get('name');
+    this.heroService.getHero(id, name)
       .subscribe(hero => this.hero = hero);
   }
   
