@@ -16,6 +16,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroService } from './services/hero.service';
 import { MessageService } from './services/message.service';
 import { MessagesComponent } from './messages/messages.component';
+import {HeroNiceNamePipe} from "./hero-nice-name.pipe";
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { MessagesComponent } from './messages/messages.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeroNiceNamePipe
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]
