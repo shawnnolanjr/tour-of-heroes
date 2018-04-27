@@ -18,7 +18,7 @@ describe('HeroService', () => {
   
   it('should display users name', inject([HeroService], (service: HeroService) => {
     const hero: Hero = { id: 1, name: 'katie' };
-    const newHero = service.getHero(hero.id);
+    const newHero = service.getHero(hero.id, hero.name);
     expect(newHero).toEqual(hero);
   }));
 });
